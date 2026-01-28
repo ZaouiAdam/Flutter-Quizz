@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quizz/quizzstart.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -26,9 +27,12 @@ class Homepage extends StatelessWidget {
               SizedBox(height: 20,),
               Center(child: 
               ElevatedButton(
-                onPressed: AlertDialog.adaptive,
-                child: const Text("Valider")),
-              )
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => QuizzStart()));     
+                }, 
+                child: const Text("Valider")
+              ),
+             )
             ]
           )
        )
